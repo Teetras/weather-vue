@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --bg-light: rgba(255, 255, 255, 0.684);  
+    --bg-dark: rgba(0, 0, 0, 0.927);         
+}
+
+body {
+  background: url('https://img.freepik.com/premium-photo/abstract-blurred-sky-colorful_40299-22.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Instrument Sans', sans-serif;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.7; 
+  z-index: 0; 
+}
+
+.dark body::before {
+  background: var(--bg-dark);
+}
